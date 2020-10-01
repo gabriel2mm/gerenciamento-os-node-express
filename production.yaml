@@ -1,7 +1,7 @@
 --- # Configuration
-    PORT: "8080"
+    PORT: "80"
     ENVIRONMENT: "production"
     DATA: 
-        MONGO_HOST: "mongodb+srv://adriano:adriano@cluster0.u67ah.gcp.mongodb.net/GerenciamentoOS"
+        MONGO_HOST: "mongodb+srv://gabriel2mm:gabriel2mm@cluster0.u67ah.gcp.mongodb.net/GerenciamentoOS"
     SECRET: "meuprojeto"
     UPLOAD_DIR: "uploads"
