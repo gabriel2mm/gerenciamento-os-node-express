@@ -12,5 +12,4 @@ require('./src/controllers/index')(app)
 require('./src/middlewares/error')(app)
 
 
-console.error(Configuration.PORT || 80)
-app.listen(Configuration.PORT || 80, () => { Configuration.ENVIRONMENT === "stage" ? console.log("Server is running!!!") : null })
+app.listen(8080, () => { Configuration.ENVIRONMENT === "stage" ? console.log("Server is running!!!") : null })
