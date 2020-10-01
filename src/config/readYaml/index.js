@@ -2,23 +2,9 @@ const yaml = require('js-yaml');
 const fs = require('fs');
 
 const Configuration = () => {
-  let data = {
-    SECRET: undefined,
-    ENVIRONMENT : undefined,
-    DATA: {
-      MONGO_HOST: undefined
-    },
-    PORT: undefined,
-    UPLOAD_DIR: undefined
-  };
+  let data;
   try {
-    let file = "";
-    if(process.env.NODE_ENV){
-      file = `./${process.env.NODE_ENV.trim()}.yaml`
-    }else{
-      file = './production.yaml'
-    }
-
+    const file = `./${process.env.NODE_ENV||"production"}.yaml`;
     if(fs.existsSync(file)){
       const fileContents = fs.readFileSync(file, 'utf8');
       data = yaml.safeLoad(fileContents);

@@ -11,5 +11,4 @@ require('./src/config/log/index')(app)
 require('./src/controllers/index')(app)
 require('./src/middlewares/error')(app)
 
-
-app.listen(80, () => { console.log(8080)})
+app.listen(Configuration.PORT || 8080, () => { Configuration.ENVIRONMENT === "stage" ? console.log("Server is running!!!") : null })
